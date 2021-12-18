@@ -27,6 +27,7 @@
 
         link.addEventListener('show.bs.dropdown', function () {
           let menu = this.querySelector(".dropdown-menu");
+          // Position minus container height.
           menu.style.top =
             container.offsetHeight - this.offsetHeight + "px";
         })
