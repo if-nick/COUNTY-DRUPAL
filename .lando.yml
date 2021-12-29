@@ -62,4 +62,3 @@ services:
       - chmod -R g+rw /mnt/files/wcor.LANDO/sites/default
   node:
     type: node:14
-
