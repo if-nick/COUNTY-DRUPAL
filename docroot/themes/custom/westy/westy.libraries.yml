@@ -2,6 +2,7 @@ style:
   version: VERSION
   css:
     theme:
+      //use.typekit.net/axz6wta.css: { type: external, minified: true }
       assets/css/westy.style.css: {}
   js:
     assets/js/westy.script.js: {}
