@@ -14,16 +14,19 @@
 
 $navbar-padding-x:            1rem;
 
-$font-size-base:              1rem; // Assumes the browser default, typically `16px`
 
+$grid-gutter-width: 3.5rem;
 
-$h1-font-size:                2.813rem; // 45px
-$h1-mobile-font-size:         2.25rem; // 36px
-$h2-font-size:                1.875rem; // 30px
-$h3-font-size:                1.563rem; // 25px
-$h4-font-size:                1.25rem; // 20px
-$h5-font-size:                1.25rem; // 20px
-$h6-font-size:                $font-size-base;
+$westy-margin-bottom: 1rem;
+$headings-margin-bottom: $westy-margin-bottom;
+$paragraph-margin-bottom: $westy-margin-bottom;
+$legend-margin-bottom: $westy-margin-bottom;
+$breadcrumb-margin-bottom: $westy-margin-bottom;
+$alert-margin-bottom: $westy-margin-bottom;
+$blockquote-margin-y: $westy-margin-bottom;
+$form-label-margin-bottom: $westy-margin-bottom;
+$form-check-margin-bottom: $westy-margin-bottom;
+
 
 
 // Theme colors

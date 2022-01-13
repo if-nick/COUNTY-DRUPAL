@@ -1,0 +1,13 @@
+// Page.
+// -----------------------------------------------------------------------------
+
+.page {
+
+  &.page--without-sidebars {
+
+    main.container {
+      // @TODO: Confirm with UX once having sidebar content.
+      // max-width: map_get($container-max-widths, "lg");
+    }
+  }
+}

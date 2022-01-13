@@ -1,10 +1,19 @@
 {#
 /**
- * @file
- * Template for the main page.
- */
+  * @file
+  * Template for the main page.
+  */
 #}
-<div class="page">
+{% set has_page_side = page.side|render|striptags|trim is not empty %}
+{% set has_page_menu = page.menu|render|striptags|trim is not empty %}
+{% set attributes = create_attribute({'class': [
+  "page",
+  has_page_side ? "page--with-side",
+  has_page_menu ? "page--with-menu",
+  (not has_page_menu and not has_page_side) ? "page--without-sidebars",
+]}) %}
+
+<div{{attributes}}>
   {% block alerts %}
     {% if page.alerts %}
       {{ page.alerts }}
@@ -12,42 +21,44 @@
   {% endblock %}
 
   <header class="page__header">
-    {% include '@westy/page/page.header.html.twig' %}
+    <div class="container">
+      {% include '@westy/page/page.header.html.twig' %}
+    </div>
   </header>
 
   <main class="container">
 
     {% if page.header %}
       <header class="page__sub_header mb-3">
-          {{ page.header }}
+        {{ page.header }}
       </header>
     {% endif %}
 
     <div class="row">
-    {% if page.content %}
-      <div class="page__content col order-md-2 order-sm-1">
+      {% if page.content %}
+        <div class="page__content col order-md-2 order-sm-1">
           {{ page.content }}
-      </div>
-    {% endif %}
-    {% if page.side|render|striptags|trim is not empty %}
-      <div class="page__side col-lg-3 col-md-7 col-sm-12 order-md-3 order-sm-2 border-left">
+        </div>
+      {% endif %}
+
+      {% if has_page_side %}
+        <div class="page__side col-lg-3 col-md-7 col-sm-12 order-md-3 order-sm-2 border-left">
           {{ page.side }}
-      </div>
-    {% endif %}
-    {% if page.menu|render|striptags|trim is not empty %}
-      <div class="page__menu col-lg-2 col-md-3 col-sm-12 order-lg-1 order-md-2 order-sm-3 border-right">
-        {{ page.menu }}
-      </div>
-    {% endif %}
+        </div>
+      {% endif %}
+
+      {% if has_page_menu %}
+        <div class="page__menu col-lg-2 col-md-3 col-sm-12 order-lg-1 order-md-2 order-sm-3 border-right">
+          {{ page.menu }}
+        </div>
+      {% endif %}
     </div>
   </main>
 
   {% if page.footer %}
     <footer class="page__footer mt-5">
       <div class="container-fluid">
-        <div class="d-flex justify-content-md-between align-items-md-center">
-          {{ page.footer }}
-        </div>
+        {{ page.footer }}
       </div>
     </footer>
   {% endif %}
