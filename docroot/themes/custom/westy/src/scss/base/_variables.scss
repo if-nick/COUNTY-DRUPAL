@@ -12,11 +12,11 @@
 // $body-bg: #000;
 // $body-color: $gray-100;
 
-$navbar-padding-x:            1rem;
-
+$navbar-padding-x: 1rem;
 
 $grid-gutter-width: 3.5rem;
 
+// Refine Bootstrap's margin-bottom.
 $westy-margin-bottom: 1rem;
 $headings-margin-bottom: $westy-margin-bottom;
 $paragraph-margin-bottom: $westy-margin-bottom;
@@ -27,45 +27,41 @@ $blockquote-margin-y: $westy-margin-bottom;
 $form-label-margin-bottom: $westy-margin-bottom;
 $form-check-margin-bottom: $westy-margin-bottom;
 
-
-
-// Theme colors
+// Theme colors.
 // -----------------------------------------------------------------------------
 $theme-colors: (
   // Maintain Bootstrap's defaults.
   // primary: $primary,
-  primary: #0073A4,
+  primary: #0073a4,
   // secondary: $secondary,
-  secondary: #DEE2E6,
+  secondary: #dee2e6,
   // success: $success,
   // info: $info,
   // warning: $warning,
   // danger: $danger,
   // light: $light,
   // dark: $dark,
-  dark: #6C757D,
+  dark: #6c757d
 );
 
 $custom-colors: (
   // Additional colors for our theme.
   // PRIMARY PALETTE.
-  blue: #0073A4,
-  gold: #AF8F6F,
-  light-green: #B7C6BC,
-  light-blue: #A1D6F8,
-  deep-purple: #34153A,
+  blue: #0073a4,
+  gold: #af8f6f,
+  light-green: #b7c6bc,
+  light-blue: #a1d6f8,
+  deep-purple: #34153a,
   dark-red: #851618,
-  dark-gray: #152E3A,
-
+  dark-gray: #152e3a,
   // BACKGROUND PALETTE.
-  faded-blue: #D0EAFB,
-  faded-gold: #F3EEE9,
-  faded-green: #E9EEEB,
-  faded-light-blue: #ECF7FE,
-  faded-purple: #EFEDF0,
-  faded-red: #F3E7E7,
-  faded-gray: #EEF0F1,
-
+  faded-blue: #d0eafb,
+  faded-gold: #f3eee9,
+  faded-green: #e9eeeb,
+  faded-light-blue: #ecf7fe,
+  faded-purple: #efedf0,
+  faded-red: #f3e7e7,
+  faded-gray: #eef0f1,
   // SHERIFF"S OFFICE
   sheriff-black: #101921,
   sheriff-yellow: #ffb500,
@@ -74,12 +70,13 @@ $custom-colors: (
   sheriff-red: #c20019
 );
 
-// Merge the maps
+// Merge the maps.
 $theme-colors: map-merge($theme-colors, $custom-colors);
+// Provide additional color for backgrounds, borders or utilities.
 // $theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
 // $utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
 // $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
 // $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
-$link-color:                 #0073A4; //red
-$link-hover-color:           #000000; //green
+$link-color: #0073a4;
+$link-hover-color: #000000;

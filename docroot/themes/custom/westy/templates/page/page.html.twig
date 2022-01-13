@@ -29,40 +29,38 @@
   <main class="container">
 
     {% if page.header %}
-      <header class="page__sub_header mb-3">
+      <header class="mb-3 page__sub_header">
         {{ page.header }}
       </header>
     {% endif %}
 
     <div class="row">
       {% if has_page_menu %}
-        <div class="page__menu col-lg-3 col-md-3 col-sm-12">
+        <div class="col-lg-3 col-md-3 col-sm-12 page__menu">
           {{ page.menu }}
         </div>
       {% endif %}
 
       {% if page.content %}
-        <div class="page__content col">
-            {{ page.content }}
+        <div class="col page__content">
+          {{ page.content }}
         </div>
       {% endif %}
-
 
       {% if has_page_side %}
-        <div class="page__side col-lg-2 col-md-12 col-sm-12">
-            {{ page.side }}
+        <div class="col-lg-2 col-md-12 col-sm-12 page__side">
+          {{ page.side }}
         </div>
       {% endif %}
 
-      {% if has_page_menu %}
     </div>
-    
+
   </main>
 
   {% if page.footer %}
-    <footer class="page__footer mt-5">
+    <footer class="mt-5 py-5 pb-md-2 text-white bg-dark-gray page__footer">
       <div class="container-fluid">
-        {{ page.footer }}
+        {% include '@westy/page/page.footer.html.twig' %}
       </div>
     </footer>
   {% endif %}
