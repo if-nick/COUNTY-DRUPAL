@@ -55,15 +55,13 @@
           {{ page.side }}
         </div>
       {% endif %}
-
     </div>
-
   </main>
 
   {% if page.footer %}
     <footer class="mt-5 text-white page__footer">
       <div class="container-fluid">
-        {% include '@westy/page/page.footer.html.twig' %}
+        {{ page.footer }}
       </div>
     </footer>
   {% endif %}
