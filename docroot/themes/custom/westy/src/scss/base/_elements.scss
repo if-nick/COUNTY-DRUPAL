@@ -11,12 +11,14 @@ h6 {
 // Blocks
 // -----------------------------------------------------------------------------
 main {
+  nav,
   .block,
   .field,
   .field__item,
   .form-item,
   .form-group,
-  .form-actions {
+  .form-actions,
+  .views-row {
     margin-bottom: $westy-margin-bottom;
   }
 }
