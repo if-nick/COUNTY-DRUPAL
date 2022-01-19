@@ -37,9 +37,9 @@ header.page__header {
       font-size: $h2-font-size;
       text-align: left;
       text-decoration: none;
-      // @include media-breakpoint-up(md) {
-      //   font-size: $h1-font-size;
-      // }
+      @include media-breakpoint-up(md) {
+        font-size: $h1-font-size;
+      }
       &:hover,
       &:active {
         color: $link-color;
