@@ -10,11 +10,13 @@ header.page__header {
 
   // Alerts
   .alert-item {
-    background-color: #E9EEEB;
+    background-color: #e9eeeb;
     .btn-close {
-      background: transparent url('/themes/custom/westy/assets/images/close-o.svg') 50%/1.5em auto no-repeat;
+      background: transparent
+        url("/themes/custom/westy/assets/images/close-o.svg") 50%/1.5em auto
+        no-repeat;
     }
-    .alert-icon{
+    .alert-icon {
       z-index: 2;
       margin-right: 2rem;
 
@@ -25,7 +27,7 @@ header.page__header {
     }
     .alert {
       margin-bottom: 0;
-      p:last-child{
+      p:last-child {
         margin: 0;
       }
     }
@@ -33,15 +35,18 @@ header.page__header {
 
   // The logo & branding section.
   .block--westy-site-branding {
-    h1 a {
-      font-size: $h2-font-size;
+    h1 {
+      font-size: 1.563rem; // 25px
+      line-height: 1.5rem;
       text-align: left;
       text-decoration: none;
-      @include media-breakpoint-up(md) {
-        font-size: $h1-font-size;
+      @include media-breakpoint-up(sm) {
+        font-size: 1.688rem; // 27px
+        line-height: 1.625rem;
       }
-      &:hover,
-      &:active {
+      a,
+      a:hover,
+      a:active {
         color: $link-color;
       }
       span {
@@ -52,6 +57,9 @@ header.page__header {
     }
     img {
       margin-right: 0.813rem;
+      @include media-breakpoint-up(sm) {
+        height: 85px;
+      }
     }
   }
 
