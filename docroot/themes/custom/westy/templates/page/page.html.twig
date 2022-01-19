@@ -11,7 +11,7 @@ set has_left_sidebar = has_left_sidebar
 <div class="page">
 
   <header class="page__header">
-
+  
     {% block alerts %}
       {% if page.alerts %}
         {{ page.alerts }}
@@ -21,6 +21,7 @@ set has_left_sidebar = has_left_sidebar
     <div class="container">
       {% include '@westy/page/page.header.html.twig' %}
     </div>
+    
   </header>
 
   <main class="container">
