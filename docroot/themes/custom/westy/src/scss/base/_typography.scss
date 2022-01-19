@@ -14,11 +14,22 @@ $h6-font-size:                $font-size-base;
 // Typography elements.
 // -----------------------------------------------------------------------------
 
+h1, h2, h3, h4, h5, h6, main {
+  line-height: 1;
+  color: $body-color;
+}
 
-h1 {
+h1, h2, h3, h4, h5, h6 {
+  a, a:hover {
+    text-decoration: none;
+  }
+}
+
+h1, h1.page-title {
   font-size: $h1-mobile-font-size;
   font-family: acumin-pro, sans-serif;
   font-weight: 800;
+  color: map_get($theme-colors, "dark-gray");
   @include media-breakpoint-up(sm) {
     font-size: $h1-font-size;
   }

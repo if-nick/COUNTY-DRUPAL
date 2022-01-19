@@ -32,7 +32,7 @@ $form-check-margin-bottom: $westy-margin-bottom;
 $theme-colors: (
   // Maintain Bootstrap's defaults.
   // primary: $primary,
-  primary: #0073a4,
+  primary: #152e3a,
   // secondary: $secondary,
   secondary: #dee2e6,
   // success: $success,
@@ -78,5 +78,6 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 // $utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
 // $utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
 
+$body-color: map_get($theme-colors, "primary");
 $link-color: #0073a4;
 $link-hover-color: #000000;

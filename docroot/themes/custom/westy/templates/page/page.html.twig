@@ -14,12 +14,14 @@
 ]}) %}
 
 <div{{attributes}}>
+
     {% block alerts %}
       {% if page.alerts %}
         {{ page.alerts }}
       {% endif %}
     {% endblock %}
 
+  <header class="page__header">
     <div class="container">
       {% include '@westy/page/page.header.html.twig' %}
     </div>
