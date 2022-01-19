@@ -1,28 +1,28 @@
-uuid: 973e48f9-8ed2-44b5-b409-797ae9b8b8e5
+uuid: 45510950-3bca-4a15-9724-d11399a897d0
 langcode: en
 status: true
 dependencies:
   config:
-    - views.view.translation
+    - views.view.contact_info
   module:
     - node
     - views
   theme:
     - westy
-id: westy_views_block__translation_block_1
+id: views_block__contact_info_group_contact
 theme: westy
-region: right_sidebar
-weight: -12
+region: side
+weight: -13
 provider: null
-plugin: 'views_block:translation-block_1'
+plugin: 'views_block:contact_info-group_contact'
 settings:
-  id: 'views_block:translation-block_1'
+  id: 'views_block:contact_info-group_contact'
   label: ''
-  label_display: visible
+  label_display: '0'
   provider: views
   context_mapping: {  }
   views_label: ''
-  items_per_page: '1'
+  items_per_page: none
 visibility:
   'entity_bundle:node':
     id: 'entity_bundle:node'
@@ -30,5 +30,4 @@ visibility:
     context_mapping:
       node: '@node.node_route_context:node'
     bundles:
-      news: news
-      page: page
+      group: group

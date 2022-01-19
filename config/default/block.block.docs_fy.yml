@@ -1,6 +1,6 @@
 uuid: 7217dd76-0106-48ef-a534-91a19549a310
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - facets.facet.docs_fy

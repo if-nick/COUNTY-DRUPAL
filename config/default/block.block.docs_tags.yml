@@ -1,6 +1,6 @@
 uuid: 13c011ab-f8fc-4f27-9a10-5400975c5e96
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - facets.facet.docs_tags

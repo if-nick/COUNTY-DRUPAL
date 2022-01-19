@@ -1,6 +1,6 @@
 uuid: ac179dab-8493-4916-9bc8-b3a4941510fa
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - facets.facet.media_fy

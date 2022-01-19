@@ -9,13 +9,15 @@ set has_left_sidebar = has_left_sidebar
   ? has_left_sidebar : page.left_sidebar|render|striptags|trim
 %}
 <div class="page">
-  {% block alerts %}
-    {% if page.alerts %}
-      {{ page.alerts }}
-    {% endif %}
-  {% endblock %}
 
   <header class="page__header">
+
+    {% block alerts %}
+      {% if page.alerts %}
+        {{ page.alerts }}
+      {% endif %}
+    {% endblock %}
+
     <div class="container">
       {% include '@westy/page/page.header.html.twig' %}
     </div>
@@ -31,7 +33,7 @@ set has_left_sidebar = has_left_sidebar
 
     <div class="row mt-5">
       {% if has_left_sidebar %}
-        <div class="page__left_sidebar col-lg-2 col-md-3 col-sm-12">
+        <div class="page__left_sidebar col-lg-3 col-md-3 col-sm-12">
           {{ page.left_sidebar }}
         </div>
       {% endif %}
@@ -43,7 +45,7 @@ set has_left_sidebar = has_left_sidebar
       {% endif %}
 
       {% if page.right_sidebar|render|striptags|trim is not empty %}
-        <div class="page__right_sidebar col-lg-2 col-md-12 col-sm-12">
+        <div class="page__right_sidebar col-lg-3 col-md-12 col-sm-12">
             {{ page.right_sidebar }}
         </div>
       {% endif %}

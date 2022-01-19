@@ -1,6 +1,6 @@
 uuid: 4b130eac-548b-42dc-9574-fc535a5f6781
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.building_service_locations
