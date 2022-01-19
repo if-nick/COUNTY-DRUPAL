@@ -1,6 +1,6 @@
 uuid: f662b330-a545-4309-b257-f0c7e6421f4b
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.news_year
@@ -11,7 +11,7 @@ dependencies:
     - westy
 id: year
 theme: westy
-region: side
+region: left_sidebar
 weight: -8
 provider: null
 plugin: 'facet_block:news_year'

@@ -1,6 +1,6 @@
 uuid: 6cb09f31-cf65-48a9-9ced-5b15d715e5d9
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.content_type
@@ -11,7 +11,7 @@ dependencies:
     - westy
 id: contenttype
 theme: westy
-region: side
+region: left_sidebar
 weight: -10
 provider: null
 plugin: 'facet_block:content_type'

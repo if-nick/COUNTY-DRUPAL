@@ -4,7 +4,7 @@
 // Page: Header; with site branding, navigation and a search modal.
 // -----------------------------------------------------------------------------
 header.page__header {
-  @extend .border-bottom, .border-dark, .border-4;
+  @extend .border-bottom, .border-4;
   border-bottom-color: map_get($theme-colors, "dark-gray") !important;
   min-height: 7.15rem;
 
@@ -68,33 +68,6 @@ header.page__header {
 
       &.show {
         background-color: map_get($theme-colors, "faded-gray");
-      }
-
-      .gg-search {
-        box-sizing: border-box;
-        position: relative;
-        display: inline-block;
-        transform: scale(var(--ggs, 1));
-        width: 16px;
-        height: 16px;
-        border: 2px solid;
-        border-radius: 100%;
-        margin-left: 4px;
-        margin-top: -4px;
-      }
-
-      .gg-search::after {
-        content: "";
-        display: block;
-        box-sizing: border-box;
-        position: absolute;
-        border-radius: 3px;
-        width: 2px;
-        height: 8px;
-        background: currentColor;
-        transform: rotate(-45deg);
-        top: 10px;
-        left: 12px;
       }
     }
 

@@ -33,14 +33,14 @@ $theme-colors: (
   // primary: $primary,
   primary: #0073A4,
   // secondary: $secondary,
-  secondary: #DEE2E6,
+  secondary: #6C757D,
   // success: $success,
   // info: $info,
   // warning: $warning,
   // danger: $danger,
   // light: $light,
   // dark: $dark,
-  dark: #6C757D,
+  // dark: #6C757D,
 );
 
 $custom-colors: (
@@ -80,3 +80,4 @@ $theme-colors: map-merge($theme-colors, $custom-colors);
 
 $link-color:                 #0073A4; //red
 $link-hover-color:           #000000; //green
+$gray-300: #DEE2E6;

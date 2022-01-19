@@ -1,6 +1,6 @@
 uuid: ac179dab-8493-4916-9bc8-b3a4941510fa
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.media_fy
@@ -10,7 +10,7 @@ dependencies:
     - westy
 id: media_fy
 theme: westy
-region: side
+region: left_sidebar
 weight: -4
 provider: null
 plugin: 'facet_block:media_fy'

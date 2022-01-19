@@ -1,0 +1,86 @@
+/**
+ * @file Styles for search page.
+ */
+
+@import "~bootstrap/scss/forms";
+
+// Search results.
+// -----------------------------------------------------------------------------
+.view-acquia-search {
+  .view-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+
+    .facets-jump-link {
+      display: none;
+    }
+  }
+
+  .views-row {
+    @extend .border-bottom;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+
+    .views-field-title {
+      strong {
+        font-weight: 500;
+      }
+    }
+
+    .views-field-type {
+      @extend .badge, .bg-faded-green;
+      color: map_get($theme-colors, "dark-gray");
+      font-weight: normal;
+      font-variant: normal !important;
+
+      em {
+        font-style: normal;
+      }
+    }
+  }
+
+  .views-exposed-form {
+    .form-item-search {
+      @extend .input-group;
+
+      label {
+        display: none;
+      }
+
+      .gg-submit {
+        position: absolute;
+        right: 1rem;
+        top: 0.9rem;
+        border: none;
+        background: transparent;
+      }
+    }
+
+    input#edit-submit-acquia-search {
+      display: none;
+    }
+
+    input#edit-reset {
+      @extend .float-end;
+      color: map_get($theme-colors, "dark-gray");
+      background: transparent !important;
+      border: none;
+      text-decoration: underline;
+    }
+  }
+}
+
+// Search filters.
+// -----------------------------------------------------------------------------
+.block-facet--checkbox {
+  @extend .border;
+
+  h2 {
+    @extend .bg-dark-gray, .text-white, .px-3, .py-2;
+  }
+
+  .facets-widget-checkbox {
+    background: transparent;
+  }
+}
