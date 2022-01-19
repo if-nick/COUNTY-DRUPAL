@@ -8,19 +8,18 @@
 {% set has_page_menu = page.menu|render|striptags|trim is not empty %}
 {% set attributes = create_attribute({'class': [
   "page",
-  has_page_side ? "page--with-side",
+
   has_page_menu ? "page--with-menu",
   (not has_page_menu and not has_page_side) ? "page--without-sidebars",
 ]}) %}
 
 <div{{attributes}}>
-  {% block alerts %}
-    {% if page.alerts %}
-      {{ page.alerts }}
-    {% endif %}
-  {% endblock %}
+    {% block alerts %}
+      {% if page.alerts %}
+        {{ page.alerts }}
+      {% endif %}
+    {% endblock %}
 
-  <header class="page__header">
     <div class="container">
       {% include '@westy/page/page.header.html.twig' %}
     </div>
@@ -28,13 +27,14 @@
 
   <main class="container">
 
-    {% if page.header %}
-      <header class="mb-3 page__sub_header">
-        {{ page.header }}
+    {% if page.header|render|striptags|trim is not empty %}
+      <header class="b-border pb-5 mt-5 page__sub_header">
+          {{ page.header }}
       </header>
     {% endif %}
 
-    <div class="row">
+    <div class="row mt-5">
+
       {% if has_page_menu %}
         <div class="col-lg-3 col-md-3 col-sm-12 page__menu">
           {{ page.menu }}
@@ -48,7 +48,7 @@
       {% endif %}
 
       {% if has_page_side %}
-        <div class="col-lg-2 col-md-12 col-sm-12 page__side">
+        <div class="col-lg-3 col-md-12 col-sm-12 page__side">
           {{ page.side }}
         </div>
       {% endif %}
