@@ -9,13 +9,13 @@ base theme: radix
 
 regions:
   alerts: Alerts
-  navbar_branding: Navbar branding
+  navbar_branding: Site branding
   navbar_left:  Navbar left
   navbar_right: Navbar right
-  header: Header
+  header: Content header
   content: Content
-  side: Side
-  menu: Menu
+  left_sidebar: Content left
+  right_sidebar: Content right
   page_bottom: Page bottom
   footer: Footer
 

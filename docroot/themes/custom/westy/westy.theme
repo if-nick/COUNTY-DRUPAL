@@ -16,8 +16,14 @@ foreach (glob($includes_path) as $filename) {
 /**
  * Implements hook_preprocess_page().
  */
-function westy_preprocess_page(array &$variables, $hook)
-{
+function westy_preprocess_page(array &$variables, $hook) {
+  $current_path = \Drupal::service('path.current')->getPath();
+
+  // Ensure facets are visible if Drupal's lazyBuilder renders them empty.
+  if ($current_path === '/search') {
+    $variables['has_left_sidebar'] = TRUE;
+  }
+
   if ($node = \Drupal::request()->attributes->get('node')) {
     // Grab nid of referenced entity items.
     $variables['nid'] = $node->id();
@@ -42,7 +48,7 @@ function westy_preprocess_field(array &$variables, $hook) {
  */
 function westy_preprocess_menu(&$variables) {
 
-  if($variables['menu_name'] === 'main') {
+  if ($variables['menu_name'] === 'main') {
     foreach ($variables['items'] as &$item) {
 
       /***
@@ -50,8 +56,21 @@ function westy_preprocess_menu(&$variables) {
        */
       $url = $item['url']->toString();
       if ($url === '/search') {
-        $item['title'] = Markup::create($item['title'] .'<i class="gg-search"></i>');
+        $item['title'] = Markup::create($item['title'] . '<i class="gg-search"></i>');
       }
     }
+  }
+}
+
+/**
+ * Implements template_preprocess_input().
+ */
+function westy_preprocess_input(&$variables) {
+  // kpr($variables);
+  /***
+   * Add a search icon to the input field.
+   */
+  if ($variables['element']['#id'] === 'edit-search') {
+    $variables['children'] = Markup::create('<button type="submit" class="gg-submit" aria-label="Search Submit"><i class="gg-search"></i></button>');
   }
 }

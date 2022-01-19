@@ -1,6 +1,6 @@
 uuid: 5af3ea8f-f980-4df5-9872-83b60cbc27f5
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - system.menu.site-map
@@ -10,7 +10,7 @@ dependencies:
     - westy
 id: sitemap
 theme: westy
-region: menu
+region: content
 weight: -13
 provider: null
 plugin: 'menu_block:site-map'

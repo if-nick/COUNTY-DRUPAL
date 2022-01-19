@@ -75,8 +75,8 @@ body, html{
 // -----------------------------------------------------------------------------
 .layout__region--menu,
 .layout__region--side,
-.page__menu,
-.page__side {
+.page__left_sidebar,
+.page__right_sidebar {
   h2 {
     font-size: $h4-font-size;
   }

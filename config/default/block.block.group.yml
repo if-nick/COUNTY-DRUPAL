@@ -1,6 +1,6 @@
 uuid: 988133b8-6fc0-4631-b36b-fb09a5432795
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - facets.facet.news_group

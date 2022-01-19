@@ -1,6 +1,6 @@
 uuid: 973e48f9-8ed2-44b5-b409-797ae9b8b8e5
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.translation
