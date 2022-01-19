@@ -8,7 +8,7 @@
 {% set has_page_menu = page.menu|render|striptags|trim is not empty %}
 {% set attributes = create_attribute({'class': [
   "page",
-
+  has_page_side ? "page--with-side",
   has_page_menu ? "page--with-menu",
   (not has_page_menu and not has_page_side) ? "page--without-sidebars",
 ]}) %}
@@ -25,6 +25,7 @@
     <div class="container">
       {% include '@westy/page/page.header.html.twig' %}
     </div>
+    
   </header>
 
   <main class="container">
