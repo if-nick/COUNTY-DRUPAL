@@ -14,12 +14,13 @@ $h6-font-size:                $font-size-base;
 // Typography elements.
 // -----------------------------------------------------------------------------
 
-h1, h2, h3, h4, h5, h6, main {
-  line-height: 1;
-  color: $body-color;
+main {
+  line-height: 1.25rem;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  color: $body-color;
   a, a:hover {
     text-decoration: none;
   }
@@ -62,7 +63,7 @@ h5 {
 h6 {
   font-family: acumin-pro, sans-serif;
   font-size: $h6-font-size;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 body, html{
