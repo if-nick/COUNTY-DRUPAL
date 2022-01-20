@@ -1,6 +1,6 @@
 uuid: 973e48f9-8ed2-44b5-b409-797ae9b8b8e5
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - views.view.translation
@@ -11,7 +11,7 @@ dependencies:
     - westy
 id: westy_views_block__translation_block_1
 theme: westy
-region: right_sidebar
+region: alerts
 weight: -12
 provider: null
 plugin: 'views_block:translation-block_1'

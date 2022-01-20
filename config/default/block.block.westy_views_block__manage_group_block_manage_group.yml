@@ -1,6 +1,6 @@
 uuid: 7a9bb9ad-7b0b-4469-a194-c1fd00e3dbcd
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.manage_group

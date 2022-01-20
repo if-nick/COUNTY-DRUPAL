@@ -57,7 +57,9 @@ set has_left_sidebar = has_left_sidebar
 
   {% if page.footer %}
     <footer class="page__footer mt-5">
-      {% include '@westy/page/page.footer.html.twig' %}
+      <div class="container-fluid">
+        {% include '@westy/page/page.footer.html.twig' %}
+      </div>
     </footer>
   {% endif %}
 </div>

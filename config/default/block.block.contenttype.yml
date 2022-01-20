@@ -1,6 +1,6 @@
 uuid: 6cb09f31-cf65-48a9-9ced-5b15d715e5d9
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - facets.facet.content_type

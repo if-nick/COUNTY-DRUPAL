@@ -1,6 +1,6 @@
 uuid: f662b330-a545-4309-b257-f0c7e6421f4b
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - facets.facet.news_year

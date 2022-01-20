@@ -1,23 +1,43 @@
 // Headings
 // -----------------------------------------------------------------------------
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+}
 
+// Blocks
+// -----------------------------------------------------------------------------
+main {
+  nav,
+  .block,
+  .field,
+  .field__item,
+  .form-item,
+  .form-group,
+  .form-actions,
+  .views-row,
+  .views-field {
+    margin-bottom: $westy-margin-bottom;
+  }
+}
+main .form-label {
+  margin-bottom: 0rem;
 }
 
 // Text
 // -----------------------------------------------------------------------------
 p {
-
 }
 
 // Links
 // -----------------------------------------------------------------------------
 a {
-
   &:hover {
     text-decoration: underline;
   }
-
 }
 
 .btn-block {
@@ -36,10 +56,6 @@ h6 {
   }
 }
 
-h1.page-title {
-  font-weight: bold;
-}
-
 // Lists
 // -----------------------------------------------------------------------------
 ol,
@@ -50,15 +66,12 @@ dl {
 // Image
 // -----------------------------------------------------------------------------
 img {
-
 }
 
 figure {
-
 }
 
 figcaption {
-
 }
 
 // Other
@@ -92,14 +105,12 @@ blockquote {
 }
 
 strong {
-
 }
 
 small {
-
 }
 
-table.table-card tr td{
+table.table-card tr td {
   vertical-align: middle;
 }
 
@@ -113,16 +124,16 @@ table.table-card tr td{
     display: inline-block;
   }
 
-  table.table-card th{
+  table.table-card th {
     display: none;
   }
 
-  table.table-card tr{
+  table.table-card tr {
     padding: 20px;
     display: block;
   }
 
-  table.table-card tr td{
+  table.table-card tr td {
     padding: 2px 0;
     vertical-align: top;
     display: block;
