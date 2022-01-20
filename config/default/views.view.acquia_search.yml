@@ -279,8 +279,8 @@ display:
           total_pages: null
           id: 0
           tags:
-            next: 'Next ›'
-            previous: '‹ Previous'
+            next: Next
+            previous: Previous
             first: '« First'
             last: 'Last »'
           expose:
@@ -291,7 +291,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          quantity: 9
+          quantity: 5
       exposed_form:
         type: input_required
         options:
@@ -704,7 +704,7 @@ display:
         cache: false
         fields: false
       display_description: ''
-      exposed_block: false
+      exposed_block: true
       display_extenders: {  }
       path: search
       menu:

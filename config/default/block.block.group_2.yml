@@ -1,6 +1,6 @@
 uuid: 935e494a-742e-4019-a7e0-20aab1a22039
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - facets.facet.group

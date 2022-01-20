@@ -1,0 +1,28 @@
+uuid: 3d6a1122-f73d-472d-9d0c-3a75543a62af
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.acquia_search
+  module:
+    - system
+    - views
+  theme:
+    - westy
+id: exposedformacquia_searchpage_search
+theme: westy
+region: header
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:acquia_search-page_search'
+settings:
+  id: 'views_exposed_filter_block:acquia_search-page_search'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: /search

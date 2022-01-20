@@ -12,19 +12,21 @@
     justify-content: space-between;
     margin: 0;
 
-    .facets-jump-link {
+    #facets-jump-link {
       display: none;
     }
   }
 
   .views-row {
-    @extend .border-bottom;
+    @extend .border-bottom, .border-2;
     margin-bottom: 2rem;
-    padding-bottom: 1rem;
+    padding-bottom: 2rem;
 
-    .views-field-title {
+    h3 a,
+    h3 a:hover {
+      text-decoration: underline;
       strong {
-        font-weight: 500;
+        font-weight: normal;
       }
     }
 
@@ -33,48 +35,62 @@
       color: map_get($theme-colors, "dark-gray");
       font-weight: normal;
       font-variant: normal !important;
+      font-size: $font-size-base;
 
       em {
         font-style: normal;
       }
     }
   }
+}
 
-  .views-exposed-form {
-    .form-item-search {
-      @extend .input-group;
+// Search form.
+// -----------------------------------------------------------------------------
+.page__sub_header {
+  @extend .bg-faded-light-blue;
 
-      label {
-        display: none;
-      }
+  .block--westy-breadcrumbs {
+    display: none;
+  }
 
-      .gg-submit {
-        position: absolute;
-        right: 1rem;
-        top: 0.9rem;
-        border: none;
-        background: transparent;
-      }
-    }
+  .form-item-search {
+    @extend .input-group;
 
-    input#edit-submit-acquia-search {
+    label {
       display: none;
     }
 
-    input#edit-reset {
-      @extend .float-end;
-      color: map_get($theme-colors, "dark-gray");
-      background: transparent !important;
+    .gg-submit {
+      position: absolute;
+      right: 1rem;
+      top: 0.9rem;
       border: none;
-      text-decoration: underline;
+      background: transparent;
     }
+  }
+
+  #edit-search--3 {
+    @extend .border, .border-2;
+    border-color: map_get($theme-colors, "dark-gray");
+  }
+
+  #edit-submit-acquia-search--3 {
+    display: none;
+  }
+
+  #edit-reset--3 {
+    @extend .float-end;
+    color: map_get($theme-colors, "dark-gray");
+    background: transparent !important;
+    border: none;
+    text-decoration: underline;
   }
 }
 
 // Search filters.
 // -----------------------------------------------------------------------------
 .block-facet--checkbox {
-  @extend .border;
+  @extend .border, .rounded, .mb-2;
 
   h2 {
     @extend .bg-dark-gray, .text-white, .px-3, .py-2;
@@ -82,5 +98,11 @@
 
   .facets-widget-checkbox {
     background: transparent;
+    .facet-item {
+      margin-bottom: 0.5rem;
+      .facets-checkbox {
+        margin-top: 0.1rem;
+      }
+    }
   }
 }
