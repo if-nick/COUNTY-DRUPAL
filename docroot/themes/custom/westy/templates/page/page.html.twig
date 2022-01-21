@@ -4,21 +4,29 @@
   * Template for the main page.
   */
 #}
-{% set has_page_side = page.side|render|striptags|trim is not empty %}
-{% set has_page_menu = page.menu|render|striptags|trim is not empty %}
+{% set has_left_sidebar = has_left_sidebar ?
+  has_left_sidebar : page.left_sidebar|render|striptags|trim is not empty %}
+
+{% set has_right_sidebar = has_right_sidebar ?
+  has_right_sidebar : page.right_sidebar|render|striptags|trim is not empty %}
+
+{% set has_page_header = has_page_header ?
+  has_page_header : page.header|render|striptags|trim is not empty %}
+
 {% set attributes = create_attribute({'class': [
   "page",
-  has_page_side ? "page--with-side",
-  has_page_menu ? "page--with-menu",
-  (not has_page_menu and not has_page_side) ? "page--without-sidebars",
+  has_left_sidebar ? "page--with-left-sidebar",
+  has_right_sidebar ? "page--with-right-sidebar",
+  (not has_left_sidebar and not has_right_sidebar) ? "page--without-sidebars",
 ]}) %}
 
 <div{{attributes}}>
-  {% block alerts %}
-    {% if page.alerts %}
-      {{ page.alerts }}
-    {% endif %}
-  {% endblock %}
+
+    {% block alerts %}
+      {% if page.alerts %}
+        {{ page.alerts }}
+      {% endif %}
+    {% endblock %}
 
   <header class="page__header">
     <div class="container">
@@ -26,39 +34,47 @@
     </div>
   </header>
 
+  {% if has_page_header %}
+    <header class="page__sub_header">
+      <div class="container-fluid b-border py-5 page__sub_header__wrapper">
+        <div class="container">
+          {{ page.header }}
+        </div>
+      </div>
+    </header>
+  {% endif %}
+
   <main class="container">
 
-    {% if page.header %}
-      <header class="page__sub_header mb-3">
-        {{ page.header }}
-      </header>
-    {% endif %}
 
-    <div class="row">
+    <div class="row mt-5">
+
+      {% if has_left_sidebar %}
+        <div class="col-lg-3 col-md-3 col-sm-12 page__menu">
+          {{ page.left_sidebar }}
+        </div>
+      {% endif %}
+
       {% if page.content %}
-        <div class="page__content col order-md-2 order-sm-1">
+        <div class="col page__content">
           {{ page.content }}
         </div>
       {% endif %}
 
-      {% if has_page_side %}
-        <div class="page__side col-lg-3 col-md-7 col-sm-12 order-md-3 order-sm-2 border-left">
-          {{ page.side }}
+      {% if has_right_sidebar %}
+        <div class="col-lg-3 col-md-12 col-sm-12 page__side">
+          {{ page.right_sidebar }}
         </div>
       {% endif %}
 
-      {% if has_page_menu %}
-        <div class="page__menu col-lg-2 col-md-3 col-sm-12 order-lg-1 order-md-2 order-sm-3 border-right">
-          {{ page.menu }}
-        </div>
-      {% endif %}
     </div>
+
   </main>
 
   {% if page.footer %}
-    <footer class="page__footer mt-5">
+    <footer class="mt-5 py-5 pb-md-2 text-white page__footer">
       <div class="container-fluid">
-        {{ page.footer }}
+        {% include '@westy/page/page.footer.html.twig' %}
       </div>
     </footer>
   {% endif %}

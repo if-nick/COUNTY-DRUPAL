@@ -5,6 +5,7 @@
 // Import site-wide libraries.
 import './_bootstrap.js';
 import './_header.js';
+import './_search.js';
 
 // Import components
 import '../components/alerts/_alerts';

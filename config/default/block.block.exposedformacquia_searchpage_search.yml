@@ -12,7 +12,7 @@ dependencies:
 id: exposedformacquia_searchpage_search
 theme: westy
 region: header
-weight: 0
+weight: -11
 provider: null
 plugin: 'views_exposed_filter_block:acquia_search-page_search'
 settings:

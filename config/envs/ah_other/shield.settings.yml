@@ -7,7 +7,7 @@ credentials:
 allow_cli: true
 debug_header: false
 unset_basic_auth_headers: true
-print: 'Env: Other'
+print: 'Env: Local'
 method: 0
 paths: ''
 allowlist: ''

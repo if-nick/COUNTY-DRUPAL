@@ -2,11 +2,8 @@ uuid: 8d950a98-e07c-413b-8b1d-b983d9d9d03c
 langcode: en
 status: true
 dependencies:
-  config:
-    - views.view.frontpage
   module:
     - system
-    - views
   theme:
     - westy
 id: views_block__frontpage_homepage_news

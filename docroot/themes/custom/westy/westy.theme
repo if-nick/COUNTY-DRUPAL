@@ -66,11 +66,11 @@ function westy_preprocess_menu(&$variables) {
  * Implements template_preprocess_input().
  */
 function westy_preprocess_input(&$variables) {
-  // kpr($variables);
+
   /***
    * Add a search icon to the input field.
    */
-  if ($variables['element']['#id'] === 'edit-search') {
+  if ($variables['element']['#id'] === 'edit-search--3') {
     $variables['children'] = Markup::create('<button type="submit" class="gg-submit" aria-label="Search Submit"><i class="gg-search"></i></button>');
   }
 }
