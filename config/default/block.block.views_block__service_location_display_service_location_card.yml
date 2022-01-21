@@ -1,0 +1,33 @@
+uuid: a445be60-68ec-4a20-9ee8-a066cc0ced30
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.service_location_display
+  module:
+    - node
+    - views
+  theme:
+    - westy
+id: views_block__service_location_display_service_location_card
+theme: westy
+region: side
+weight: -13
+provider: null
+plugin: 'views_block:service_location_display-service_location_card'
+settings:
+  id: 'views_block:service_location_display-service_location_card'
+  label: ''
+  label_display: '0'
+  provider: views
+  context_mapping: {  }
+  views_label: ''
+  items_per_page: none
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      page: page
