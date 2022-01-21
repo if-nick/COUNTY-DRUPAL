@@ -25,9 +25,6 @@
     h3 a,
     h3 a:hover {
       text-decoration: underline;
-      strong {
-        font-weight: normal;
-      }
     }
 
     .views-field-type {
@@ -49,24 +46,28 @@
 .page__sub_header {
   @extend .bg-faded-light-blue;
 
-  .block--westy-breadcrumbs {
+  label,
+  .block--westy-breadcrumbs,
+  .form-item-sort-by,
+  .form-item-sort-order,
+  #edit-submit-acquia-search--3 {
     display: none;
   }
 
   .form-item-search {
     @extend .input-group;
+  }
 
-    label {
-      display: none;
-    }
+  .form-select-sm {
+    width: auto;
+  }
 
-    .gg-submit {
-      position: absolute;
-      right: 1rem;
-      top: 0.9rem;
-      border: none;
-      background: transparent;
-    }
+  .gg-submit {
+    position: absolute;
+    right: 1rem;
+    top: 0.9rem;
+    border: none;
+    background: transparent;
   }
 
   #edit-search--3 {
@@ -74,9 +75,6 @@
     border-color: map_get($theme-colors, "dark-gray");
   }
 
-  #edit-submit-acquia-search--3 {
-    display: none;
-  }
 
   #edit-reset--3 {
     @extend .float-end;
@@ -90,10 +88,11 @@
 // Search filters.
 // -----------------------------------------------------------------------------
 .block-facet--checkbox {
-  @extend .border, .rounded, .mb-2;
+  @extend .border, .rounded, .mb-4;
 
   h2 {
     @extend .bg-dark-gray, .text-white, .px-3, .py-2;
+    font-size: $h4-font-size;
   }
 
   .facets-widget-checkbox {

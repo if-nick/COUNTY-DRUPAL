@@ -1,4 +1,4 @@
-shield_enable: false
+shield_enable: true
 credential_provider: shield
 credentials:
   shield:
@@ -6,11 +6,10 @@ credentials:
     pass: ''
 allow_cli: true
 debug_header: false
-unset_basic_auth_headers: true
-print: 'Env: Local'
+print: ''
 method: 0
 paths: ''
 allowlist: ''
 http_method_allowlist: {  }
 domains: ''
-path: ''
+whitelist: ''
