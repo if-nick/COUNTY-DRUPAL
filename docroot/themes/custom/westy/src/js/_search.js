@@ -14,7 +14,6 @@
    */
   Drupal.behaviors.westySearch = {
     attach: function (context) {
-
       // Run only once.
       if (context !== document) return;
 
@@ -32,8 +31,12 @@
       // Add our select markup.
       let selectBox = document.createRange().createContextualFragment(`
         <select class="form-select form-select-sm" aria-label="form-select-sm">
-          <option value="title" ${title_sort ? 'selected' : ''}>Sort | A to Z</option>
-          <option value="relevance" ${title_sort ? '' : 'selected'}>Sort | By relevance</option>
+          <option value="title" ${
+            title_sort ? "selected" : ""
+          }>Sort | A to Z</option>
+          <option value="relevance" ${
+            title_sort ? "" : "selected"
+          }>Sort | By relevance</option>
         </select>`);
       container.appendChild(selectBox);
 

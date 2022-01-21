@@ -12,7 +12,7 @@ dependencies:
 id: contenttype
 theme: westy
 region: left_sidebar
-weight: -10
+weight: -12
 provider: null
 plugin: 'facet_block:content_type'
 settings:
