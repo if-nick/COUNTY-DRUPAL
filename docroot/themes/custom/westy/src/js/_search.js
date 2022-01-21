@@ -32,8 +32,8 @@
       // Add our select markup.
       let selectBox = document.createRange().createContextualFragment(`
         <select class="form-select form-select-sm" aria-label="form-select-sm">
-          <option value="Title" ${title_sort ? 'selected' : ''}>Sort | A to Z</option>
-          <option value="Relevance" ${title_sort ? '' : 'selected'}>Sort | By relevance</option>
+          <option value="title" ${title_sort ? 'selected' : ''}>Sort | A to Z</option>
+          <option value="relevance" ${title_sort ? '' : 'selected'}>Sort | By relevance</option>
         </select>`);
       container.appendChild(selectBox);
 
@@ -41,7 +41,7 @@
       const select = container.querySelector("select");
       select.addEventListener("change", function () {
         let href = new URL(window.location.href);
-        if (this.value.indexOf("Title") > -1) {
+        if (this.value.indexOf("title") > -1) {
           href.searchParams.set("sort_by", "title");
           href.searchParams.set("sort_order", "ASC");
         } else {
