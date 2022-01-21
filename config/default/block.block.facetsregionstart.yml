@@ -9,7 +9,7 @@ dependencies:
 id: facetsregionstart
 theme: westy
 region: left_sidebar
-weight: -11
+weight: -13
 provider: null
 plugin: facets_region_start_block
 settings:

@@ -11,7 +11,7 @@ dependencies:
 id: docs_fy
 theme: westy
 region: left_sidebar
-weight: -2
+weight: -4
 provider: null
 plugin: 'facet_block:docs_fy'
 settings:

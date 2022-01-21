@@ -11,7 +11,7 @@ dependencies:
 id: docs_tags
 theme: westy
 region: left_sidebar
-weight: -3
+weight: -8
 provider: null
 plugin: 'facet_block:docs_tags'
 settings:

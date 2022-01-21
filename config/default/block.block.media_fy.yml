@@ -11,7 +11,7 @@ dependencies:
 id: media_fy
 theme: westy
 region: left_sidebar
-weight: -4
+weight: -7
 provider: null
 plugin: 'facet_block:media_fy'
 settings:
