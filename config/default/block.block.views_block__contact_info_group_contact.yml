@@ -11,8 +11,8 @@ dependencies:
     - westy
 id: views_block__contact_info_group_contact
 theme: westy
-region: header
-weight: -10
+region: right_sidebar
+weight: -16
 provider: null
 plugin: 'views_block:contact_info-group_contact'
 settings:

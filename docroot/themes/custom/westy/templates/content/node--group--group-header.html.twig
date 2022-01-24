@@ -1,0 +1,28 @@
+{#
+        /**
+          * @file
+          * Template for a Node.
+          */
+        #}
+{% extends '@radix/content/node.twig' %}
+{% block content %}
+{%
+  set image_url = node.field_image.0 is not empty ?
+  file_url(node.field_image.entity.fileuri) : FALSE
+%}
+  <div class="row">
+    <div class="align-items-stretch col {{ image_url ? 'col-md-5' : '' }}">
+      {# {{ node.field_summary.0.value }} #}
+      {{ content.field_summary }}
+    </div>
+    {% if image_url %}
+    {# {{content.field_image}} #}
+      <div class="align-items-stretch col col-md-7 img-bg" style="
+      background-size: cover;
+      background-position: center center;
+      background-image: url('{{ image_url }}')
+      ">
+      </div>
+    {% endif %}
+  </div>
+{% endblock content %}

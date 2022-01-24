@@ -3,6 +3,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - core.entity_view_mode.node.group_header
     - field.storage.node.field_summary
   module:
     - node
@@ -179,7 +180,10 @@ display:
       style:
         type: default
       row:
-        type: fields
+        type: 'entity:node'
+        options:
+          relationship: none
+          view_mode: group_header
       query:
         type: views_query
         options:

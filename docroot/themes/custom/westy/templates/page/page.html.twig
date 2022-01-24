@@ -10,11 +10,15 @@
 {% set has_right_sidebar = has_right_sidebar ?
   has_right_sidebar : page.right_sidebar|render|striptags|trim is not empty %}
 
-{% set has_page_header = has_page_header ?
-  has_page_header : page.header|render|striptags|trim is not empty %}
+{% set has_subheader = has_subheader ?
+  has_subheader : page.header|render|striptags|trim is not empty %}
+
+{% set has_subfooter = has_subfooter ?
+  has_subfooter : page.footer|render|striptags|trim is not empty %}
 
 {% set attributes = create_attribute({'class': [
   "page",
+  has_subheader ? "page--with-sub-header",
   has_left_sidebar ? "page--with-left-sidebar",
   has_right_sidebar ? "page--with-right-sidebar",
   (not has_left_sidebar and not has_right_sidebar) ? "page--without-sidebars",
@@ -34,48 +38,52 @@
     </div>
   </header>
 
-  {% if has_page_header %}
-    <header class="page__sub_header">
-      <div class="container-fluid b-border py-5 page__sub_header__wrapper">
-        <div class="container">
-          {{ page.header }}
-        </div>
+  {% if has_subheader %}
+    <header class="b-border py-5 page__sub_header">
+      <div class="container">
+        {{ page.header }}
       </div>
     </header>
   {% endif %}
 
-  <main class="container">
+  <main class="py-5 page__main_container">
+    <div class="container">
 
+      <div class="row">
 
-    <div class="row mt-5">
+        {% if has_left_sidebar %}
+          <div class="col-lg-3 col-md-3 col-sm-12 page__left_sidebar">
+            {{ page.left_sidebar }}
+          </div>
+        {% endif %}
 
-      {% if has_left_sidebar %}
-        <div class="col-lg-3 col-md-3 col-sm-12 page__menu">
-          {{ page.left_sidebar }}
-        </div>
-      {% endif %}
+        {% if page.content %}
+          <div class="col page__content">
+            {{ page.content }}
+          </div>
+        {% endif %}
 
-      {% if page.content %}
-        <div class="col page__content">
-          {{ page.content }}
-        </div>
-      {% endif %}
+        {% if has_right_sidebar %}
+          <div class="col-lg-3 col-md-12 col-sm-12 page__right_sidebar">
+            {{ page.right_sidebar }}
+          </div>
+        {% endif %}
 
-      {% if has_right_sidebar %}
-        <div class="col-lg-3 col-md-12 col-sm-12 page__side">
-          {{ page.right_sidebar }}
-        </div>
-      {% endif %}
-
+      </div>
     </div>
-
   </main>
 
-  {% if page.footer %}
-    <footer class="mt-5 py-5 pb-md-2 text-white page__footer">
-      <div class="container-fluid">
-        {% include '@westy/page/page.footer.html.twig' %}
+  {% if has_subfooter %}
+    <div class="py-2 py-md-5 text-white bg-blue page__footer__blocks">
+      <div class="container">
+        {{ page.footer }}
       </div>
-    </footer>
+    </div>
   {% endif %}
+
+  <footer class="py-2 py-md-5 bg-dark-gray text-white page__footer">
+    <div class="container">
+      {% include '@westy/page/page.footer.html.twig' %}
+    </div>
+  </footer>
 </div>
