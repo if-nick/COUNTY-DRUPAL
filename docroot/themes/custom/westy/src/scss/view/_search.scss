@@ -5,24 +5,49 @@
 @import "~bootstrap/scss/forms";
 
 .path--search {
+  // Search header.
+  // -----------------------------------------------------------------------------
+  #wcor-search-page-tabs {
+    .nav {
+      @extend .border-bottom, .border-2, .border-dark-gray, .mb-5;
+      h3 {
+        @extend .m-0;
+      }
+      .nav-link {
+        @extend .px-0, .ps-4, .pe-4, .pb-3;
+        color: map_get($theme-colors, "dark-gray");
+        margin-bottom: -1px;
+        &.active {
+          @extend .border-bottom, .border-5, .border-dark-gray;
+          color: map_get($theme-colors, "dark-gray");
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
   // Search results.
   // -----------------------------------------------------------------------------
   .view-acquia-search {
     .view-header {
-      display: flex;
-      justify-content: space-between;
-      margin: 0;
+      @extend .pb-5,
+        .mb-5,
+        .border-bottom,
+        .border-2,
+        .d-flex,
+        .flex-wrap,
+        .justify-content-between;
 
-      #facets-jump-link {
-        display: none;
+      #westy-search-active-facets {
+        flex: 0 0 100%;
+        a {
+          @extend .btn, .bg-faded-blue, .p-3, .me-4;
+        }
       }
     }
 
     .views-row {
-      @extend .border-bottom, .border-2;
-      margin-bottom: 2rem;
-      padding-bottom: 2rem;
-
+      @extend .border-bottom, .border-2, .pb-5, .mb-5;
       h3 a,
       h3 a:hover {
         text-decoration: underline;
@@ -38,6 +63,10 @@
         em {
           font-style: normal;
         }
+      }
+
+      .views-row .views-field:last-of-type {
+        @extend .mb-0;
       }
     }
   }
@@ -72,8 +101,7 @@
     }
 
     #edit-search--2 {
-      @extend .border, .border-2;
-      border-color: map_get($theme-colors, "dark-gray");
+      @extend .border, .border-2, .border-dark-gray;
     }
 
     #edit-reset--2 {
@@ -88,11 +116,13 @@
   // Search filters.
   // -----------------------------------------------------------------------------
   .block-facet--checkbox {
-    @extend .border, .rounded, .mb-4;
+    @extend .border, .rounded, .mb-5;
 
-    h2 {
-      @extend .bg-dark-gray, .text-white, .px-3, .py-2;
+    h3 {
+      @extend .bg-dark-gray, .text-white, .p-3;
+      margin: -1rem -1rem 1rem -1rem;
       font-size: $h4-font-size;
+      font-weight: 400;
     }
 
     .facets-widget-checkbox {

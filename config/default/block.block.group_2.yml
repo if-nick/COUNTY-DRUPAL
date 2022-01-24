@@ -17,8 +17,8 @@ provider: null
 plugin: 'facet_block:group'
 settings:
   id: 'facet_block:group'
-  label: 'Filter by group'
-  label_display: visible
+  label: 'Search Facet — Filter by Program'
+  label_display: '0'
   provider: facets
   block_id: group_2
 visibility:
