@@ -10,11 +10,15 @@
 {% set has_right_sidebar = has_right_sidebar ?
   has_right_sidebar : page.right_sidebar|render|striptags|trim is not empty %}
 
-{% set has_page_header = has_page_header ?
-  has_page_header : page.header|render|striptags|trim is not empty %}
+{% set has_subheader = has_subheader ?
+  has_subheader : page.header|render|striptags|trim is not empty %}
+
+{% set has_subfooter = has_subfooter ?
+  has_subfooter : page.footer|render|striptags|trim is not empty %}
 
 {% set attributes = create_attribute({'class': [
   "page",
+  has_subheader ? "page--with-sub-header",
   has_left_sidebar ? "page--with-left-sidebar",
   has_right_sidebar ? "page--with-right-sidebar",
   (not has_left_sidebar and not has_right_sidebar) ? "page--without-sidebars",
@@ -35,12 +39,10 @@
 
   </header>
 
-  {% if has_page_header %}
-    <header class="page__sub_header">
-      <div class="container-fluid b-border py-5 page__sub_header__wrapper">
-        <div class="container">
-          {{ page.header }}
-        </div>
+  {% if has_subheader %}
+    <header class="b-border py-5 page__sub_header">
+      <div class="container">
+        {{ page.header }}
       </div>
     </header>
   {% endif %}
@@ -53,7 +55,7 @@
       </header>
     {% endif %}
 
-    <div class="row mt-5">
+      <div class="row">
 
       {% if has_page_menu %}
         <div class="col-lg-3 col-md-3 col-sm-12 page__menu">
@@ -61,11 +63,11 @@
         </div>
       {% endif %}
 
-      {% if page.content %}
-        <div class="col page__content">
-          {{ page.content }}
-        </div>
-      {% endif %}
+        {% if page.content %}
+          <div class="col page__content">
+            {{ page.content }}
+          </div>
+        {% endif %}
 
       {% if has_page_side %}
         <div class="col-lg-3 col-md-12 col-sm-12 page__side">
@@ -73,7 +75,6 @@
         </div>
       {% endif %}
     </div>
-
   </main>
 
   {% if page.footer %}
@@ -81,6 +82,12 @@
       <div class="container-fluid">
         {% include '@westy/page/page.footer.html.twig' %}
       </div>
-    </footer>
+    </div>
   {% endif %}
+
+  <footer class="py-2 py-md-5 bg-dark-gray text-white page__footer">
+    <div class="container">
+      {% include '@westy/page/page.footer.html.twig' %}
+    </div>
+  </footer>
 </div>

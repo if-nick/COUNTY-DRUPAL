@@ -8,6 +8,8 @@
 @import "layout/page.header";
 @import "layout/page.content";
 @import "layout/page.footer";
+@import "layout/page.footer_blocks";
+@import "layout/page.front";
 
 // Component
 // -----------------------------------------------------------------------------
@@ -26,6 +28,7 @@
 // -----------------------------------------------------------------------------
 @import "content/node.page";
 @import "content/node.article";
+@import "content/node.group";
 @import "block/block";
 @import "field/field";
 @import "media/embedded";

@@ -1,31 +1,25 @@
 {% set branding = 'Washington County, Oregon'| t %}
 
-{% if page.footer| render| striptags| trim is not empty  %}
-  <div class="row p-2 pt-5 p-md-5 bg-blue page__footer__blocks">
-    {{ page.footer }}
-  </div>
-{% endif %}
-
-<div class="row p-2 p-md-5 bg-dark-gray">
-  <div class="col-lg-5 offset-xl-1 col-md-6 col-12 page__footer__navigation">
+<div class="row py-2">
+  <div class="col-lg-5 col-md-6 col-12 page__footer__navigation">
     <a class="shown-md logo" href="/" aria-label="{{ branding }}">
       <img src="{{ base_path ~ directory }}/assets/images/wcor-white.svg" alt="{{ branding }}" width="80"/>
     </a>
     {{ drupal_menu('footer') }}
   </div>
 
-  <div class="col-lg-4 col-xl-3 offset-xl-1 col-md-5 offset-md-1 col-12 page__footer__social">
+  <div class="col-lg-4 col-xl-3 col-md-5 offset-md-1 col-12 page__footer__social">
     {% include '@westy/page/page.footer.social.html.twig' %}
   </div>
 
-  <div class="col-lg-2 col-md-4 col-12 hidden-md page__footer__logo">
+  <div class="col-lg-2 offset-xl-1 col-md-4 col-12 hidden-md page__footer__logo">
     <a href="/" aria-label="{{ branding }}">
       <img src="{{ base_path ~ directory }}/assets/images/wcor-white.svg" alt="{{ branding }}" width="105"/>
     </a>
   </div>
 </div>
 
-<div class="row p-2 p-md-5 bg-dark-gray">
+<div class="row py-2 pb-md-5">
 
   <div class="col-lg-6 col-12 page__footer__service">
     {{ drupal_menu('footer-service-links') }}

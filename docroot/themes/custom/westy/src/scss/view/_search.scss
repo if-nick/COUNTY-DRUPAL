@@ -4,103 +4,104 @@
 
 @import "~bootstrap/scss/forms";
 
-// Search results.
-// -----------------------------------------------------------------------------
-.view-acquia-search {
-  .view-header {
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
+.path--search {
+  // Search results.
+  // -----------------------------------------------------------------------------
+  .view-acquia-search {
+    .view-header {
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
 
-    #facets-jump-link {
-      display: none;
-    }
-  }
-
-  .views-row {
-    @extend .border-bottom, .border-2;
-    margin-bottom: 2rem;
-    padding-bottom: 2rem;
-
-    h3 a,
-    h3 a:hover {
-      text-decoration: underline;
+      #facets-jump-link {
+        display: none;
+      }
     }
 
-    .views-field-type {
-      @extend .badge, .bg-faded-green;
-      color: map_get($theme-colors, "dark-gray");
-      font-weight: normal;
-      font-variant: normal !important;
-      font-size: $font-size-base;
+    .views-row {
+      @extend .border-bottom, .border-2;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
 
-      em {
-        font-style: normal;
+      h3 a,
+      h3 a:hover {
+        text-decoration: underline;
+      }
+
+      .views-field-type {
+        @extend .badge, .bg-faded-green;
+        color: map_get($theme-colors, "dark-gray");
+        font-weight: normal;
+        font-variant: normal !important;
+        font-size: $font-size-base;
+
+        em {
+          font-style: normal;
+        }
       }
     }
   }
-}
 
-// Search form.
-// -----------------------------------------------------------------------------
-.page__sub_header {
-  @extend .bg-faded-light-blue;
+  // Search form.
+  // -----------------------------------------------------------------------------
+  .page__sub_header {
+    @extend .bg-faded-light-blue;
 
-  label,
-  .block--westy-breadcrumbs,
-  .form-item-sort-by,
-  .form-item-sort-order,
-  #edit-submit-acquia-search--3 {
-    display: none;
+    label,
+    .block--westy-breadcrumbs,
+    .form-item-sort-by,
+    .form-item-sort-order,
+    #edit-submit-acquia-search--2 {
+      display: none;
+    }
+
+    .form-item-search {
+      @extend .input-group;
+    }
+
+    .form-select-sm {
+      width: auto;
+    }
+
+    .gg-submit {
+      position: absolute;
+      right: 1rem;
+      top: 0.9rem;
+      border: none;
+      background: transparent;
+    }
+
+    #edit-search--2 {
+      @extend .border, .border-2;
+      border-color: map_get($theme-colors, "dark-gray");
+    }
+
+    #edit-reset--2 {
+      @extend .float-end;
+      color: map_get($theme-colors, "dark-gray");
+      background: transparent !important;
+      border: none;
+      text-decoration: underline;
+    }
   }
 
-  .form-item-search {
-    @extend .input-group;
-  }
+  // Search filters.
+  // -----------------------------------------------------------------------------
+  .block-facet--checkbox {
+    @extend .border, .rounded, .mb-4;
 
-  .form-select-sm {
-    width: auto;
-  }
+    h2 {
+      @extend .bg-dark-gray, .text-white, .px-3, .py-2;
+      font-size: $h4-font-size;
+    }
 
-  .gg-submit {
-    position: absolute;
-    right: 1rem;
-    top: 0.9rem;
-    border: none;
-    background: transparent;
-  }
-
-  #edit-search--3 {
-    @extend .border, .border-2;
-    border-color: map_get($theme-colors, "dark-gray");
-  }
-
-
-  #edit-reset--3 {
-    @extend .float-end;
-    color: map_get($theme-colors, "dark-gray");
-    background: transparent !important;
-    border: none;
-    text-decoration: underline;
-  }
-}
-
-// Search filters.
-// -----------------------------------------------------------------------------
-.block-facet--checkbox {
-  @extend .border, .rounded, .mb-4;
-
-  h2 {
-    @extend .bg-dark-gray, .text-white, .px-3, .py-2;
-    font-size: $h4-font-size;
-  }
-
-  .facets-widget-checkbox {
-    background: transparent;
-    .facet-item {
-      margin-bottom: 0.5rem;
-      .facets-checkbox {
-        margin-top: 0.1rem;
+    .facets-widget-checkbox {
+      background: transparent;
+      .facet-item {
+        margin-bottom: 0.5rem;
+        .facets-checkbox {
+          margin-top: 0.1rem;
+        }
       }
     }
   }
