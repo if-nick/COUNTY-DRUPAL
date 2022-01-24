@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Custom module for small, utility-type routines.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function wcor_blocks_theme($existing, $type, $theme, $path) {
+
+  return [
+    'wcor_blocks__search_page_tabs' => [
+      'variables' => [
+        'attributes' => [],
+      ],
+    ],
+  ];
+
+}

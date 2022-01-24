@@ -767,7 +767,7 @@ display:
           plugin_id: text
           empty: false
           content:
-            value: "<div id=\"westy-search-sort-order\"></div>\r\n"
+            value: "<div id=\"westy-search-sort-order\"></div>\r\n<div id=\"westy-search-active-facets\"></div>\r\n"
             format: basic_html
           tokenize: false
       exposed_block: true

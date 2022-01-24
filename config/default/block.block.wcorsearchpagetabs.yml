@@ -1,0 +1,25 @@
+uuid: 41cbcf0e-d781-4cf5-99b5-ed30f728d379
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - wcor_blocks
+  theme:
+    - westy
+id: wcorsearchpagetabs
+theme: westy
+region: content
+weight: -11
+provider: null
+plugin: wcor_blocks__search_page_tabs
+settings:
+  id: wcor_blocks__search_page_tabs
+  label: 'WCOR Search Page Tabs'
+  label_display: '0'
+  provider: wcor_blocks
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: "/search\r\n/search/*"

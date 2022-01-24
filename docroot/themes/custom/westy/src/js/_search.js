@@ -12,7 +12,7 @@
    * multiple options, we create here in Javascript. That avoids creating more
    * templates , especially if we probably need Javascript anyway.
    */
-  Drupal.behaviors.westySearch = {
+  Drupal.behaviors.westySearchSort = {
     attach: function (context) {
       // Run only once.
       if (context !== document) return;
@@ -53,6 +53,42 @@
         }
         // Redirect with the new URL parameters.
         window.location = href;
+      });
+    },
+  };
+
+  /***
+   * Search Header Facets
+   *
+   * To allow showing facets in the sidebar (as facets blocks) as well as
+   * showing facet-badges in the header we copy them using JavaScript.
+   * When facets render on the page they're initially anchor tags, then hidden
+   * as the facets' javascript runs and recreates them as checkboxes. We use
+   * the anchor tags to avoid waiting for facets' javascript to run.
+   */
+  Drupal.behaviors.westySearchFacets = {
+    attach: function (context) {
+      // Run only once.
+      if (context !== document) return;
+
+      // Find the active facets
+      const facets = document.querySelectorAll(
+        ".js-facets-checkbox-links .facet-item > a.is-active"
+      );
+
+      const container = document.querySelector("main .view-header div#westy-search-active-facets");
+
+      facets.forEach((facet) => {
+
+        let match = facet.innerText.match(/\(-\) (?<cleanStr>[^(]+)/);
+        if(!match || !match.groups.cleanStr) return;
+
+        let badge = document.createElement('a');
+        badge.href = facet.href;
+        badge.innerText = `${ match.groups.cleanStr.trim() } X`;
+
+        container.appendChild(badge);
+
       });
     },
   };

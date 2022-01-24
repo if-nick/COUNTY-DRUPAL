@@ -9,7 +9,7 @@ dependencies:
 id: views_block__frontpage_homepage_news
 theme: westy
 region: content
-weight: -10
+weight: -12
 provider: null
 plugin: 'views_block:frontpage-homepage_news'
 settings:

@@ -1,0 +1,5 @@
+name: WCOR Custom Blocks
+description: WCOR custom blocks for the Westy theme.
+package: WCOR
+type: module
+core_version_requirement: ^8.8 || ^9

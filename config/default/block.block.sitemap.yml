@@ -11,7 +11,7 @@ dependencies:
 id: sitemap
 theme: westy
 region: content
-weight: -13
+weight: -8
 provider: null
 plugin: 'menu_block:site-map'
 settings:
