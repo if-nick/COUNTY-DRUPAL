@@ -9,11 +9,11 @@ dependencies:
     - field.field.node.group.field_facebook
     - field.field.node.group.field_group_path
     - field.field.node.group.field_image
+    - field.field.node.group.field_location
     - field.field.node.group.field_migration_status
     - field.field.node.group.field_parent
     - field.field.node.group.field_phone
     - field.field.node.group.field_phone_extension
-    - field.field.node.group.field_primary_service_location
     - field.field.node.group.field_short_title
     - field.field.node.group.field_status
     - field.field.node.group.field_summary
@@ -36,7 +36,7 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    weight: 2
+    weight: 0
     region: content
   field_facebook:
     type: string
@@ -44,7 +44,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 4
+    weight: 1
     region: content
   field_image:
     type: image_url
@@ -52,39 +52,14 @@ content:
     settings:
       image_style: ''
     third_party_settings: {  }
-    weight: 8
+    weight: 5
     region: content
   field_migration_status:
     type: entity_reference_rss_category
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 7
-    region: content
-  field_parent:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: true
-    third_party_settings: {  }
-    weight: 3
-    region: content
-  field_primary_service_location:
-    type: entity_reference_entity_view
-    label: inline
-    settings:
-      view_mode: embedded
-      link: false
-    third_party_settings: {  }
     weight: 4
-    region: content
-  field_status:
-    type: entity_reference_label
-    label: inline
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 1
     region: content
   field_twitter:
     type: string
@@ -92,15 +67,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 6
-    region: content
-  field_type:
-    type: entity_reference_label
-    label: hidden
-    settings:
-      link: false
-    third_party_settings: {  }
-    weight: 0
+    weight: 3
     region: content
   field_youtube:
     type: string
@@ -108,7 +75,7 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 5
+    weight: 2
     region: content
 hidden:
   content_moderation_control: true
@@ -116,11 +83,14 @@ hidden:
   field_email: true
   field_group_path: true
   field_location: true
+  field_parent: true
   field_phone: true
   field_phone_extension: true
   field_primary_service_location: true
   field_short_title: true
+  field_status: true
   field_summary: true
+  field_type: true
   group_telephone_number_formatter_eva_phone_link: true
   groups_entity_view_child_groups: true
   langcode: true
