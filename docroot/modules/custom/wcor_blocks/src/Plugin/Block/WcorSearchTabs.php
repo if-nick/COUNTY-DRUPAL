@@ -3,7 +3,6 @@
 namespace Drupal\wcor_blocks\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
-use Drupal\Core\Render\Markup;
 
 /**
  * Provides a custom block.
@@ -33,7 +32,7 @@ class WcorSearchTabs extends BlockBase {
 
     $current_path = \Drupal::service('path.current')->getPath();
 
-    // @TODO: Add tab links, once available.
+    // @todo Add tab links, once available.
     $html = '
   <ul class="nav">
     <li class="nav-item">

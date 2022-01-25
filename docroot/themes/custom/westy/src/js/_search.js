@@ -76,10 +76,12 @@
         ".js-facets-checkbox-links .facet-item > a.is-active"
       );
 
+      // Find the view-header for appending them.
       const container = document.querySelector("main .view-header div#westy-search-active-facets");
 
       facets.forEach((facet) => {
 
+        // Place the new facet-badges.
         let match = facet.innerText.match(/\(-\) (?<cleanStr>[^(]+)/);
         if(!match || !match.groups.cleanStr) return;
 
