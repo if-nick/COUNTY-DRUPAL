@@ -1,28 +1,36 @@
 {#
-        /**
-          * @file
-          * Template for a Node.
-          */
-        #}
+    /**
+    * @file
+    * Template for a Node.
+    */
+    #}
 {% extends '@radix/content/node.twig' %}
-{% block content %}
-{%
-  set image_url = node.field_image.0 is not empty ?
+{% set image_url = node.field_image.0 is not empty ?
   file_url(node.field_image.entity.fileuri) : FALSE
 %}
-  <div class="row">
-    <div class="align-items-stretch col {{ image_url ? 'col-md-5' : '' }}">
-      {# {{ node.field_summary.0.value }} #}
-      {{ content.field_summary }}
-    </div>
-    {% if image_url %}
-    {# {{content.field_image}} #}
-      <div class="align-items-stretch col col-md-7 img-bg" style="
-      background-size: cover;
-      background-position: center center;
-      background-image: url('{{ image_url }}')
-      ">
+{% block content %}
+
+      <div class="row group_header">
+        <div class="align-items-stretch col {{ image_url ? 'col-md-5' : '' }} group_header__left">
+
+          {{ drupal_entity('block', 'westy_breadcrumbs') }}
+
+          <h1 class="page-title">
+            {{ node.title.value }}
+          </h1>
+          {# {{ node.field_summary.0.value }} #}
+          {{ content.field_summary }}
+        </div>
+        {% if image_url %}
+          {# {{content.field_image}} #}
+          <div class="col col-md-7 group_header__right">
+            <div style="
+            height: 100%;
+            background-size: cover;
+            background-position: center center;
+            background-image: url('{{ image_url }}')
+            "></div>
+          </div>
+        {% endif %}
       </div>
-    {% endif %}
-  </div>
-{% endblock content %}
+    {% endblock content %}
