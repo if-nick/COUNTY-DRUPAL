@@ -1,7 +1,24 @@
 
 
 .node-type--group {
+
   .page__sub_header {
-    @extend .bg-faded-light-blue;
+    @extend .py-0, .bg-faded-light-blue;
+
+    .container > .block--westy-breadcrumbs, .container > .block--westy-page-title {
+      // Hide these; they are replaced lower in the DOM.
+      // @see themes/custom/westy/templates/content/node--group--group-header.html.twig
+      display: none;
+    }
+
+    .breadcrumb {
+      @extend .ms-0;
+    }
+
+    .group_header__left {
+      @extend .py-5;
+    }
+
   }
+
 }
