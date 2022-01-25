@@ -30,7 +30,7 @@ class WcorSearchTabs extends BlockBase {
    */
   public function build() {
 
-    // @TODO: Add tab links, once available.
+    // @todo Add tab links, once available.
     $html = '
 <ul class="nav">
   <li class="nav-item">
