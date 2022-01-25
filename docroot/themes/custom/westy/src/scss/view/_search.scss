@@ -54,7 +54,7 @@
       }
 
       .views-field-type {
-        @extend .badge, .bg-faded-green;
+        @extend .badge, .bg-faded-green, .mb-0;
         color: map_get($theme-colors, "dark-gray");
         font-weight: normal;
         font-variant: normal !important;
@@ -82,6 +82,10 @@
     .form-item-sort-order,
     #edit-submit-acquia-search--2 {
       display: none;
+    }
+
+    form {
+      position: relative;
     }
 
     .form-item-search {
