@@ -30,24 +30,22 @@ class WcorSearchTabs extends BlockBase {
    */
   public function build() {
 
-    $current_path = \Drupal::service('path.current')->getPath();
-
-    // @todo Add tab links, once available.
+    // @TODO: Add tab links, once available.
     $html = '
-  <ul class="nav">
-    <li class="nav-item">
-      <h3><a class="nav-link' . ($current_path === '/search' ? ' active' : '') . '" href="#">All</a></h3>
-    </li>
-    <li class="nav-item">
-      <h3><a class="nav-link" href="#">News</a></h3>
-    </li>
-    <li class="nav-item">
-      <h3><a class="nav-link" href="#">Service</a></h3>
-    </li>
-    <li class="nav-item">
-      <h3><a class="nav-link" href="#">Document</a></h3>
-    </li>
-  </ul>
+<ul class="nav">
+  <li class="nav-item">
+    <h3><a class="nav-link active" href="#">All</a></h3>
+  </li>
+  <li class="nav-item">
+    <h3><a class="nav-link" href="#">News</a></h3>
+  </li>
+  <li class="nav-item">
+    <h3><a class="nav-link" href="#">Service</a></h3>
+  </li>
+  <li class="nav-item">
+    <h3><a class="nav-link" href="#">Document</a></h3>
+  </li>
+</ul>
 ';
 
     return [
