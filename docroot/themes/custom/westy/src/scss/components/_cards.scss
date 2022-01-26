@@ -1,7 +1,7 @@
 // Article: Cards
 // -----------------------------------------------------------------------------
 
-.page__right_sidebar .card {
+.page__side .card {
   margin-bottom: 1rem;
 
   .card-text {
@@ -20,6 +20,7 @@
       h2 {
         color: #fff;
         font-weight: bold;
+      h2 {
         margin-bottom: 0;
       }
     }
