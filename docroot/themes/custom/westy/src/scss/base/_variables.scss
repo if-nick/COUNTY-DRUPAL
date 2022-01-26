@@ -40,6 +40,7 @@ $theme-colors: (
   // warning: $warning,
   // danger: $danger,
   // light: $light,
+  light: #eef0f1,
   // dark: $dark,
   dark: #6c757d
 );
@@ -82,3 +83,5 @@ $body-color: map_get($theme-colors, "primary");
 $link-color: #0073a4;
 $link-hover-color: #000000;
 $gray-300: #DEE2E6;
+$form-check-input-checked-color: map_get($theme-colors, "blue");
+$pagination-active-bg: map_get($theme-colors, "blue");

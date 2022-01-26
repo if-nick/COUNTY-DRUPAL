@@ -27,15 +27,15 @@
   }
 }
 
-.shown-md {
-  @include media-breakpoint-up(md) {
-    display: none;
+.shown-lg {
+  display: none;
+  @include media-breakpoint-up(lg) {
+    display: initial;
   }
 }
 
-.hidden-md {
-  display: none;
-  @include media-breakpoint-up(md) {
-    display: initial;
+.hidden-lg {
+  @include media-breakpoint-up(lg) {
+    display: none;
   }
 }

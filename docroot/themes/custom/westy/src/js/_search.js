@@ -30,7 +30,7 @@
 
       // Add our select markup.
       let selectBox = document.createRange().createContextualFragment(`
-        <select class="form-select form-select-sm" aria-label="form-select-sm">
+        <select class="form-select form-select-md" aria-label="form-select-md">
           <option value="title" ${
             title_sort ? "selected" : ""
           }>Sort | A to Z</option>
@@ -73,24 +73,24 @@
 
       // Find the active facets
       const facets = document.querySelectorAll(
-        ".js-facets-checkbox-links .facet-item > a.is-active"
+        "main .facet-item > a.is-active"
       );
 
       // Find the view-header for appending them.
-      const container = document.querySelector("main .view-header div#westy-search-active-facets");
+      const container = document.querySelector(
+        "main .view-header div#westy-search-active-facets"
+      );
 
       facets.forEach((facet) => {
-
         // Place the new facet-badges.
         let match = facet.innerText.match(/\(-\) (?<cleanStr>[^(]+)/);
-        if(!match || !match.groups.cleanStr) return;
+        if (!match || !match.groups.cleanStr) return;
 
-        let badge = document.createElement('a');
+        let badge = document.createElement("a");
         badge.href = facet.href;
-        badge.innerText = `${ match.groups.cleanStr.trim() } X`;
+        badge.innerText = `${match.groups.cleanStr.trim()} X`;
 
         container.appendChild(badge);
-
       });
     },
   };

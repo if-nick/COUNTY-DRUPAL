@@ -4,8 +4,8 @@
 
 // Import site-wide libraries.
 import './_bootstrap.js';
-import './_header.js';
 import './_search.js';
+import './_header.js';
 
 // Import components
 import '../components/alerts/_alerts';
@@ -28,7 +28,5 @@ import '../components/alerts/_alerts';
   //     $('.toast').toast('show');
   //   }
   // };
-
-
 
 })(jQuery, Drupal);

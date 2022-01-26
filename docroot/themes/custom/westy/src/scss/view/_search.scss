@@ -38,6 +38,10 @@
         .flex-wrap,
         .justify-content-between;
 
+        .form-select-md {
+          @extend .py-2;
+        }
+
       #westy-search-active-facets {
         flex: 0 0 100%;
         a {
@@ -54,7 +58,7 @@
       }
 
       .views-field-type {
-        @extend .badge, .bg-faded-green, .mb-0;
+        @extend .badge, .bg-faded-green, .mb-0, .p-2;
         color: map_get($theme-colors, "dark-gray");
         font-weight: normal;
         font-variant: normal !important;
@@ -105,7 +109,7 @@
     }
 
     #edit-search--2 {
-      @extend .border, .border-2, .border-dark-gray;
+      @extend .border, .border-2, .border-dark-gray, .px-4, .py-2;
     }
 
     #edit-reset--2 {
@@ -130,8 +134,10 @@
     }
 
     .facets-widget-checkbox {
+      @extend .rounded;
       background: transparent;
       .facet-item {
+        @extend .d-flex, .align-items-center;
         margin-bottom: 0.5rem;
         .facets-checkbox {
           margin-top: 0.1rem;

@@ -1,10 +1,10 @@
 // Article: Cards
 // -----------------------------------------------------------------------------
 
-.page__side .card {
+.page__right_sidebar .card {
   margin-bottom: 1rem;
 
-  .card-text{
+  .card-text {
     margin-bottom: 1rem;
 
     &:last-child {
@@ -12,21 +12,20 @@
     }
   }
 
-  &.contact-item{
+  &.contact-item {
     border: 0;
 
     .card-header {
-      background-color: map_get($theme-colors, "dark-gray");
-      color: #fff;
-      font-weight: bold;
-
+      @extend .bg-dark-gray;
       h2 {
+        color: #fff;
+        font-weight: bold;
         margin-bottom: 0;
       }
     }
 
     .card-body {
-      background-color: map_get($theme-colors, "faded-gray");
+      @extend .bg-light;
     }
   }
 }

@@ -27,7 +27,6 @@ main .form-label {
   margin-bottom: 0rem;
 }
 
-
 // Text
 // -----------------------------------------------------------------------------
 p {
@@ -141,6 +140,24 @@ table.table-card tr td {
   }
 }
 
+.breadcrumb {
+  a,
+  a:hover {
+    color: map_get($theme-colors, "dark");
+  }
+  .active a {
+    color: $link-color;
+    &:hover {
+      $link-hover-color: #000000;
+    }
+  }
+}
 .pagination {
   flex-wrap: wrap;
+  .page-link {
+    color: map_get($theme-colors, "blue");
+  }
+  .page-item.active .page-link {
+    background-color: map_get($theme-colors, "blue");
+  }
 }

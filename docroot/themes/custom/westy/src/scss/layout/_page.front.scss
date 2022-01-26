@@ -4,9 +4,9 @@
 
 // Page: main content.
 // -----------------------------------------------------------------------------
-.path--frontpage .page__main_container {
-  @extend .bg-faded-light-blue;
-  // background: map_get($theme-colors, "faded-light-blue");
-
+.path--frontpage {
+  .page__main_container {
+    @extend .bg-faded-light-blue;
+  }
 
 }

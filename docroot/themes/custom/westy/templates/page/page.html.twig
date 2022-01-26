@@ -33,21 +33,21 @@
     {% endblock %}
 
   <header class="page__header">
-    <div class="container">
+    <div class="container-lg">
       {% include '@westy/page/page.header.html.twig' %}
     </div>
   </header>
 
   {% if has_subheader %}
     <header class="b-border py-5 page__sub_header">
-      <div class="container">
+      <div class="container-lg">
         {{ page.header }}
       </div>
     </header>
   {% endif %}
 
   <main class="py-5 page__main_container">
-    <div class="container">
+    <div class="container-lg">
 
       <div class="row">
 
@@ -75,14 +75,14 @@
 
   {% if has_subfooter %}
     <div class="py-2 py-md-5 text-white bg-blue page__footer__blocks">
-      <div class="container">
+      <div class="container-lg">
         {{ page.footer }}
       </div>
     </div>
   {% endif %}
 
-  <footer class="py-2 py-md-5 bg-dark-gray text-white page__footer">
-    <div class="container">
+  <footer class="pt-5 pb-2 bg-dark-gray text-white page__footer">
+    <div class="container-lg">
       {% include '@westy/page/page.footer.html.twig' %}
     </div>
   </footer>

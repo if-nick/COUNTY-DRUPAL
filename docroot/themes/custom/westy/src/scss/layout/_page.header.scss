@@ -81,7 +81,7 @@ header.page__header {
     a.nav-link {
       font-size: $h4-font-size;
       font-weight: 600;
-      padding: 1.5rem 0.5rem;
+      padding: 1.5rem 1rem;
       margin-left: 1rem;
 
       @include media-breakpoint-up(lg) {
@@ -131,21 +131,24 @@ header.page__header {
     }
 
     // Search menu flyout.
-    .form-wrapper {
-      margin: 0;
-    }
+    #search-block-form {
+      margin-left: -1rem;
+      .form-search {
+        font-style: italic;
+        @include media-breakpoint-up(lg) {
+          width: 21rem;
+        }
+      }
 
-    .form-search {
-      font-style: italic;
-    }
+      .form-actions {
+        margin: 0;
+        display: inline-block;
+        margin-left: 0.5rem;
 
-    .form-actions {
-      display: inline-block;
-      margin-left: 0.5rem;
-
-      .form-submit {
-        color: map_get($theme-colors, "dark-gray");
-        background-color: map_get($theme-colors, "faded-light-blue");
+        .form-submit {
+          color: map_get($theme-colors, "dark-gray");
+          background-color: map_get($theme-colors, "faded-light-blue");
+        }
       }
     }
   }
