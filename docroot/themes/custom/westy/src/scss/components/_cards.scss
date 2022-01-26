@@ -20,7 +20,6 @@
       h2 {
         color: #fff;
         font-weight: bold;
-      h2 {
         margin-bottom: 0;
       }
     }
@@ -29,12 +28,12 @@
       @extend .bg-light;
     }
   }
-}
 
-.card-body {
-  padding: 1.5rem;
+  .card-body {
+    padding: 1.5rem;
 
-  p:last-child {
-    margin: 0;
+    p:last-child {
+      margin: 0;
+    }
   }
 }
